@@ -1,0 +1,22 @@
+[
+  {
+    "id": "d189a263-c539-4e02-8bf5-f0780b808a34",
+    "name": "根城はサイコロを振らない",
+    "team": "2-3",
+    "imagePath": "example.png",
+    "programType": ["体験"],
+    "location": "S45",
+    "floor": 4,
+    "prText": "競人"
+  },
+  {
+    "id": "c8f366dc-65f9-43b6-99b0-29d1f43c7c3b",
+    "name": "根城はサイコロを振らない2",
+    "team": "2-3",
+    "imagePath": "example.png",
+    "programType": ["体験"],
+    "location": "S45",
+    "floor": 3,
+    "prText": "競人2"
+  }
+]
