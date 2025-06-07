@@ -2,6 +2,11 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "蒼煌祭17th非公式ページ｜食事",
+  description: "蒼煌祭17thの食事についての非公式のページです。",
+};
+
 export default function Dining() {
   return (
     <div>
