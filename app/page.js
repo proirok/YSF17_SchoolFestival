@@ -2,6 +2,11 @@ import styles from "./page.module.css";
 import { Callout } from "@/app/compoent/callout.jsx";
 import Image from "next/image";
 
+export const metadata = {
+  title: "蒼煌祭17th非公式ページ｜トップ",
+  description: "蒼煌祭17thの非公式のページのトップです。",
+};
+
 export default function Home() {
   return (
     <div className={styles.page}>
