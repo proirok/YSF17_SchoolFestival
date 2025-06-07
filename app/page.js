@@ -15,6 +15,9 @@ export default function Home() {
         />
         <h1>横浜サイエンスフロンティア高校文化祭「蒼煌祭」</h1>
       </div>
+      <div>
+        カウントダウン
+      </div>
       <Callout kind={"warn"}>
         <p>
           このサイトは非公式の有志による情報まとめサイトです。
@@ -27,14 +30,14 @@ export default function Home() {
       </div>
       <div>
         <h2>名前の由来</h2>
-          <div>
-            <h3>「蒼煌祭」</h3>
-            <p>由来は...</p>
-          </div>
-          <div>
-            <h3>スローガン「澄」</h3>
-            <p>由来は...</p>
-          </div>
+        <div>
+          <h3>「蒼煌祭」</h3>
+          <p>由来は...</p>
+        </div>
+        <div>
+          <h3>スローガン「澄」</h3>
+          <p>由来は...</p>
+        </div>
       </div>
       <div>
         <h2>来場に際しての注意</h2>
@@ -42,8 +45,8 @@ export default function Home() {
           <iframe 
             src={"https://docs.google.com/presentation/d/e/2PACX-1vTmQeHPzEP7-2RDqIVzUkOWsNH-c_viIoOE3gNlkJxcR_7I-ruZBBRb4qJEOJr3itFXMYjF-DLjRTB4/pubembed?start=false&loop=true&delayms=5000"}
             border={"none"}
-            width={960}
-            height={569}
+            width={320}
+            height={190}
             allowFullScreen={true}
             mozallowfullscreen={"true"}
             webkitallowfullscreen={"true"}>
