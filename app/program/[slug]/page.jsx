@@ -33,6 +33,7 @@ export default async function Program({ params }) {
       <div className={styles["pr-tags"]}>
         {program.programType.map((type) => {
           return (
+            /* タグ検索できるようにしたらここを書き換える */
             <div key={type} className={styles["pr-tag"]}>{type}</div>
           );
         })}
@@ -44,6 +45,8 @@ export default async function Program({ params }) {
         </div>
         <p>{program.prText || ""}</p>
       </div>
+      {/*地図も作りましょう*/}
+      <div style={{ marginTop: "1em" }}>位置を示す地図</div>
     </>
   );
 }
