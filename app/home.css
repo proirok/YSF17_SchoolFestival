@@ -57,3 +57,8 @@ p{
     width:min(70vh,90%);
     aspect-ratio: 16 / 10.5;
 }
+#YSFmap{
+    aspect-ratio: 600 / 450;
+    border:0px solid;
+    width:90%;
+}
