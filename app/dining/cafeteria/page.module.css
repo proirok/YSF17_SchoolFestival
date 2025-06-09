@@ -3,16 +3,15 @@
 }
 
 .priceTable {
-    text-align: left;
+  text-align: left;
 }
 .priceTable th {
-    text-align: left;
-    width: 400px;
+  text-align: left;
+  font-size: 200%;
+  width: 400px;
 }
 .priceTable td {
-    text-align: left;
-    width: 200px;
-}
-.priceTable p {
-    font-size: "200%"
+  text-align: left;
+  font-size: 200%;
+  width: 200px;
 }

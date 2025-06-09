@@ -17,18 +17,18 @@ export default function Cafeteria() {
         <div className={styles.flex}>
           <table className={styles.priceTable} style={{maxWidth: "100%"}}>
             <tr>
-              <th scope="row" style={{ fontSize: "200%" }}>
+              <th scope="row" className={styles.priceTable}>
                 ・カレー
               </th>
-              <td style={{ fontSize: "200%" }}>
+              <td className={styles.priceTable}>
                 /400円
               </td>
             </tr>
             <tr>
-              <th scope="row" style={{ fontSize: "200%" }}>
+              <th scope="row" className={styles.priceTable}>
                 ・カツカレー
               </th>
-              <td style={{ fontSize: "200%" }}>
+              <td className={styles.priceTable}>
                 /400円
               </td>
             </tr>
