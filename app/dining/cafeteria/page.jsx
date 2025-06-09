@@ -14,7 +14,7 @@ export default function Cafeteria() {
         <h1>メニュー</h1>
         {/** メニューはデータベースから取り出してくる？ */}
         {/** CSSいい感じにお願いします */}
-        <div className={styles.flex}>
+        <div>
           <table className={styles.priceTable} style={{maxWidth: "100%"}}>
             <tr>
               <th scope="row" className={styles.priceTable}>
