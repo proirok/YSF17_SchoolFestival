@@ -1,0 +1,59 @@
+:root{
+    /**/
+}
+html{
+    scroll-behavior: smooth;
+}
+.contentBox{
+    position:relative;
+    padding:0 0 2rem 0;
+    width:90vw;
+    background-color: #FCFCFC;
+    margin:30px auto;
+}
+h2{
+    font-size: 2rem;
+    margin:0 0 1rem 0;
+    scroll-padding-top: 80px;
+}
+h3{
+    position:relative;
+    left: 1rem;
+    font-size: 1.6rem;
+    margin:0.8rem 0 0.4rem 0;
+}
+p{
+    font-size: 1rem;
+    padding-left: 1em;
+}
+#home_index ul{
+    position:relative;
+    left:2rem;
+}
+#home_index li{
+    margin-top: 1rem;
+}
+#home_index a{
+    display: inline-block;
+    color: hsl(220, 100%, 60%);
+    border-bottom: 2px solid;
+}
+#container_trainTimetable{
+    display: flex;
+    justify-content: space-around;
+}
+.button_trainTimetable{
+    position:relative;
+    display: inline-block;
+    width:10rem;
+    text-align: center;
+    background-color: #FCFCFC;
+    border: 3px solid gray;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+}
+.slide{
+    position:relative;
+    width:min(70vh,90%);
+    aspect-ratio: 16 / 10.5;
+}
