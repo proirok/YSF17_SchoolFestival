@@ -12,7 +12,8 @@ export default function Cafeteria() {
       <TitleBarWithBack backpage="/dining" pagename="カフェテリア"/>
       <div>
         <h1>メニュー</h1>
-        {/** メニューはデータベースから取り出してくる？ */}
+        {/** ysf at wikiの情報を使用、値上げ後の値段が不明。 */}
+        {/** メニューすら覚えていないので暫定 */}
         {/** CSSいい感じにお願いします */}
         <div className={styles.priceTable} style={{maxWidth: "100vw"}}>
           <table className={styles.priceTable} style={{maxWidth: "100vw"}}>
