@@ -1,7 +1,9 @@
 import styles from "./page.module.css";
 import home_styles from "./home.css";
 import { Callout } from "@/app/compoent/callout.jsx";
+import { Countdown } from "@/app/compoent/countdown.jsx";
 import Image from "next/image";
+
 
 export const metadata = {
   title: "蒼煌祭17th非公式ページ｜トップ",
@@ -11,7 +13,7 @@ export const metadata = {
 export default function Home() {
   return (
     <div className={styles.page}>
-      <div>
+      <div id="top_visual">
         {/* 仮作成のトップです */}
         <Image
           src="/ysf_top.png"
@@ -23,7 +25,8 @@ export default function Home() {
       </div>
 
       <div className="contentBox">
-        カウントダウン
+        <h2>蒼煌祭まで...</h2>
+        <Countdown />
       </div>
       
       <div className="contentBox">

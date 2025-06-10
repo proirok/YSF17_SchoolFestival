@@ -8,13 +8,15 @@ html{
     position:relative;
     padding:0 0 2rem 0;
     width:90vw;
-    background-color: #FCFCFC;
+    /*background-color: #FCFCFC;*/
     margin:30px auto;
 }
 h2{
     font-size: 2rem;
+    color:hsl(220, 100%, 20%);
     margin:0 0 1rem 0;
     scroll-padding-top: 80px;
+    border-bottom:solid 2px hsla(200, 100%, 60%, 0.8);
 }
 h3{
     position:relative;
@@ -26,6 +28,23 @@ p{
     font-size: 1rem;
     padding-left: 1em;
 }
+
+#top_visual{
+    position:relative;
+    width:100vw;
+    height:100vh;
+    margin: 0;
+    background-color: #FCFCFC;
+}
+#countdown_display{
+    text-align: center;
+    color: hsl(200, 95%, 50%);
+}
+#countdown_display span{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
 #home_index ul{
     position:relative;
     left:2rem;
@@ -48,17 +67,21 @@ p{
     width:10rem;
     text-align: center;
     background-color: #FCFCFC;
-    border: 3px solid gray;
+    border: 3px solid hsl(220, 100%, 70%);
     border-radius: 2rem;
     font-size: 1.2rem;
 }
 .slide{
     position:relative;
-    width:min(70vh,90%);
+    width:90%;
+    margin:0 auto;
     aspect-ratio: 16 / 10.5;
 }
 #YSFmap{
+    position:relative;
+    display:block;
     aspect-ratio: 600 / 450;
     border:0px solid;
     width:90%;
+    margin:0 auto;
 }
