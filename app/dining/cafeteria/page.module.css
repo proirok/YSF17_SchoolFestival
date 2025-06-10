@@ -3,11 +3,17 @@
 }
 .priceTable th {
   text-align: left;
-  font-size: 200%;
+  font-size: 2rem;
   width: 400px;
 }
 .priceTable td {
   text-align: left;
-  font-size: 200%;
+  font-size: 2rem;
   width: 200px;
+}
+.priceTable table {
+  padding-left: 1em;
+}
+.bulletedList {
+  padding-left: 1em;
 }

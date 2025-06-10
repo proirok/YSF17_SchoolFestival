@@ -14,8 +14,8 @@ export default function Cafeteria() {
         <h1>メニュー</h1>
         {/** メニューはデータベースから取り出してくる？ */}
         {/** CSSいい感じにお願いします */}
-        <div>
-          <table className={styles.priceTable} style={{maxWidth: "100%"}}>
+        <div className={styles.priceTable} style={{maxWidth: "100vw"}}>
+          <table className={styles.priceTable} style={{maxWidth: "100vw"}}>
             <tr>
               <th scope="row" className={styles.priceTable}>
                 ・カレー
@@ -36,10 +36,13 @@ export default function Cafeteria() {
         </div>
       </div>
       <div>
-        <h1>注意事項</h1>
-        {/** 箇条書きのルールも必要？ */}
-        <p>・食券を買い、そのメニューの列に並んでください。途中、通路がありますので詰めすぎないようにお気を付けください。</p>
-        <p>・容器は使い捨てです。</p>
+        <h1 style={{ paddingTop: "1rem"}}>注意事項</h1>
+        <div className={styles.bulletedList}>
+          {/** 箇条書きのルールも必要？ */}
+          <p>・非公式情報です。情報に誤りがある可能性があります。</p>
+          <p>・食券を買い、そのメニューの列に並んでください。途中、通路がありますので詰めすぎないようにお気を付けください。</p>
+          <p>・容器は使い捨てです。</p>
+        </div>
       </div>
     </div>
   );
