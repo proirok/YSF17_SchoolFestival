@@ -21,7 +21,7 @@ export default function Cafeteria() {
                 ・カレー
               </th>
               <td className={styles.priceTable}>
-                /400円
+                /430円
               </td>
             </tr>
             <tr>
@@ -29,7 +29,15 @@ export default function Cafeteria() {
                 ・カツカレー
               </th>
               <td className={styles.priceTable}>
-                /400円
+                /450円
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" className={styles.priceTable}>
+                ・カツサンド
+              </th>
+              <td className={styles.priceTable}>
+                /370円?
               </td>
             </tr>
           </table>
