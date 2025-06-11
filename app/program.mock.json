@@ -37,11 +37,11 @@
     "programType": ["販売"],
     "location": "コミュニケーションコート",
     "floor": 1,
-    "prText": "食販用テストデータです。"
+    "prText": "食販用テストデータです。idはfoodSales.mock.jsonのidと同じとします。"
   },
   { 
     "id": "29fe6fea-c849-7ae3-03b5-528493e7a8bf",
-    "name": "食販2",
+    "name": "食販2 - デフォ子",
     "team": "3-2",
     "imagePath": "example.png",
     "programType": ["販売"],
@@ -51,7 +51,7 @@
   },
   { 
     "id": "f23e837b-d283-51c9-fdc1-96edb4e7a479",
-    "name": "食販3",
+    "name": "食販3 - モモ",
     "team": "3-3",
     "imagePath": "example.png",
     "programType": ["販売"],
