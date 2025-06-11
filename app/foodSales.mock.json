@@ -1,0 +1,59 @@
+[
+  {
+    "id": "85ea1274-4fcd-1aa4-7c67-43d2c32a244b",
+    "menus":[
+      {
+        "name": "食べ物1",
+        "price": 500,
+        "specificIngredients": ["卵", "かに"],
+        "ingredients": ["卵", "米", "かに"]
+      }
+    ]
+  },
+  {
+    "id": "29fe6fea-c849-7ae3-03b5-528493e7a8bf",
+    "menus":[
+      {
+        "name": "コシヒカリのおにぎり",
+        "price": 100,
+        "specificIngredients": [],
+        "ingredients": ["米", "海苔"]
+      },
+      {
+        "name": "あきたこまちのおにぎり",
+        "price": 100,
+        "specificIngredients": [],
+        "ingredients": ["米", "海苔"]
+      },
+      {
+        "name": "醤油おにぎり",
+        "price": 200,
+        "specificIngredients": ["小麦"],
+        "ingredients": ["米", "海苔", "大豆", "小麦"]
+      }
+    ]
+  },
+  {
+    "id": "f23e837b-d283-51c9-fdc1-96edb4e7a479",
+    "menus":[
+      {
+        "name": "水色の金平糖",
+        "price": 50,
+        "specificIngredients": [],
+        "ingredients": ["砂糖", "着色料"]
+      },
+      {
+        "name": "ピンク色の金平糖",
+        "price": 30,
+        "specificIngredients": [],
+        "ingredients": ["砂糖", "着色料"]
+      },
+      {
+        "name": "黄色の金平糖",
+        "price": 40,
+        "specificIngredients": [],
+        "ingredients": ["砂糖", "着色料"]
+      }
+    ]
+  }
+]
