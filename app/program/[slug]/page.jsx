@@ -41,7 +41,7 @@ export default async function Program({ params }) {
       <div className={styles["pr-content"]}>
         <div className={styles["pr-subject"]}>
           <h2>{program.name}</h2>
-          <h2 style={{ marginLeft: "auto" }}>{"@" + program.location}</h2>
+          <h2 style={{ marginLeft: "auto" }}>{program.floor + "階 @" + program.location}</h2>
         </div>
         <p>{program.prText || ""}</p>
       </div>

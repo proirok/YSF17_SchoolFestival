@@ -46,3 +46,9 @@ token.json
 
 # Sync
 latimeriadb
+
+# VSCode
+/.vscode/
+
+#public
+/public/*.png

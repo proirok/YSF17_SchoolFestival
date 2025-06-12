@@ -1,3 +1,5 @@
+/* 帯としての可認識性を付与するためにページのカラーを少し暗くした背景色か(上)下の枠線が欲しいかもしれない */
+
 import Link from "next/link";
 import { IoChevronBackOutline } from "react-icons/io5";
 import styles from "./title_bar.module.css"
