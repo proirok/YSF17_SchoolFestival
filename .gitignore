@@ -49,3 +49,6 @@ gha-creds-*.json
 
 # Sync
 latimeriadb
+
+# VSCode
+/.vscode/
