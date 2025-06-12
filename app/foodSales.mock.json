@@ -5,8 +5,8 @@
       {
         "name": "食べ物1",
         "price": 500,
-        "specificIngredients": ["卵", "かに"],
-        "ingredients": ["卵", "米", "かに"]
+        "specificIngredients": ["卵", "りんご"],
+        "ingredients": ["卵", "米", "りんご"]
       }
     ]
   },
