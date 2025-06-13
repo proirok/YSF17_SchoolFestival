@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { Callout } from "@/app/compoent/callout.jsx";
 import { Countdown } from "@/app/compoent/countdown.jsx";
 import Image from "next/image";
+import { solveBasePath } from "@/app/lib/index.js";
 
 export const metadata = {
   title: "蒼煌祭17th非公式ページ｜トップ",
@@ -15,7 +16,7 @@ export default function Home() {
       <div id="top_visual">
         {/* 仮作成のトップです */}
         <Image
-          src="/ysf_top.png"
+          src={solveBasePath("/ysf_top.png")}
           alt="横浜サイエンスフロンティア高校の画像です"
           width={780}
           height={450}

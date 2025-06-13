@@ -1,6 +1,6 @@
 import styles from "../slug_page.module.css";
 import TitleBarWithBack from "@/app/compoent/title_bar";
-import { parseProgramsData } from "@/app/lib/index.js";
+import { parseProgramsData, solveBasePath } from "@/app/lib/index.js";
 import ProgramSample from "@/app/program.mock.json";
 import Image from "next/image";
 
@@ -37,7 +37,7 @@ export default async function Program({ params }) {
     <>
       <TitleBarWithBack backpage="/program" pagename={program.name} />
       <Image
-        src={program.imagePath}
+        src={solveBasePath(program.imagePath)}
         alt={program.name + " の画像"}
         width={240}
         height={240}
