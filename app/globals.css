@@ -45,43 +45,43 @@ body {
   適切な間隔を開けてくれる
 
 */
-:root{
-  --color_touchable:hsl(220, 100%, 60%);
+:root {
+  --color_touchable: hsl(220, 100%, 60%);
 }
-h2{
+h2 {
   font-size: 2rem;
-  color:hsl(220, 100%, 20%);
-  margin:0 0 1rem 0;
+  color: hsl(220, 100%, 20%);
+  margin: 0 0 1rem 0;
   scroll-padding-top: 80px;
-  border-bottom:solid 2px hsla(200, 100%, 60%, 0.8);
+  border-bottom: solid 2px hsla(200, 100%, 60%, 0.8);
 }
-h3{
-  position:relative;
+h3 {
+  position: relative;
   left: 1rem;
   font-size: 1.6rem;
-  margin:0.8rem 0 0.4rem 0;
+  margin: 0.8rem 0 0.4rem 0;
 }
-p{
+p {
   font-size: 1rem;
   padding-left: 1em;
 }
-a{
+a {
   display: inline-block;
   color: var(--color_touchable);
   border-bottom: 2px solid;
   text-decoration: none;
 }
 
-.contentBox{
-  position:relative;
-  padding:0 0 2rem 0;
-  width:90vw;
+.contentBox {
+  position: relative;
+  padding: 0 0 2rem 0;
+  width: 90vw;
   /*background-color: #FCFCFC;*/
-  margin:30px auto;
+  margin: 30px auto;
 }
-.touchable{
+.touchable {
   box-shadow: 0px 0px 10px hsla(240, 50%, 70%, 0.1);
 }
-.touchable:hover{
+.touchable:hover {
   box-shadow: 0px 0px 20px hsla(240, 80%, 70%, 0.3);
 }

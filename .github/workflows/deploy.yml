@@ -52,14 +52,14 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Get public images
         run: |
           GOOGLE_APPLICATION_CREDENTIALS=${{ steps.google-auth.outputs.credentials_file_path }} npm run syncPublic -- --noOAuth
-        
+
       - name: Build with Next.js
-        run:  npm run build
-        
+        run: npm run build
+
       - name: Upload artifact
         uses: "actions/upload-pages-artifact@v3"
         with:

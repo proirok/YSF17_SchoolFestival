@@ -1,6 +1,5 @@
 name: Check lint and format
-on:
-  ["push", "pull_request", "workflow_dispatch"]
+on: ["push", "pull_request", "workflow_dispatch"]
 
 jobs:
   lint:
@@ -31,7 +30,6 @@ jobs:
 
       - name: Run lint for JavaScript files
         run: npm run lint -- --max-warnings=0
-
 
   format:
     runs-on: ubuntu-latest
