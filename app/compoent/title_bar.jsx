@@ -1,8 +1,8 @@
 /* 帯としての可認識性を付与するためにページのカラーを少し暗くした背景色か(上)下の枠線が欲しいかもしれない */
 
+import styles from "./title_bar.module.css";
 import Link from "next/link";
 import { IoChevronBackOutline } from "react-icons/io5";
-import styles from "./title_bar.module.css"
 
 /**
  * 上部の戻るボタン＋ページ名
@@ -11,16 +11,21 @@ import styles from "./title_bar.module.css"
  * @param {string} props.pagename - ページ名
  * @param {string} props.themeColor - テーマカラー
  * @returns {JSX.Element}
-*/
-export default function TitleBarWithBack({backpage = "/", pagename = "無題", themeColor = undefined}) {
+ */
+export default function TitleBarWithBack({
+  backpage = "/",
+  pagename = "無題",
+  themeColor = undefined,
+}) {
   return (
     <header className={styles["title-bar"]}>
-      <BackButton to={backpage} arrowColor={themeColor}/>
-      <h2 className={styles["page-title"]} style={{ color: themeColor }}>{pagename}</h2>
+      <BackButton to={backpage} arrowColor={themeColor} />
+      <h2 className={styles["page-title"]} style={{ color: themeColor }}>
+        {pagename}
+      </h2>
     </header>
   );
 }
-
 
 /**
  * 左上の矢印戻るボタン
@@ -28,11 +33,11 @@ export default function TitleBarWithBack({backpage = "/", pagename = "無題", t
  * @param {string} props.to - 戻る先のパス
  * @param {string} props.arrowColor - 矢印の色
  * @returns {JSX.Element}
-*/
-function BackButton({to, arrowColor}) {
+ */
+function BackButton({ to, arrowColor }) {
   return (
     <Link href={to} className={styles["back-button"]}>
-      <IoChevronBackOutline size={36} color={arrowColor}/>
+      <IoChevronBackOutline size={36} color={arrowColor} />
     </Link>
   );
 }

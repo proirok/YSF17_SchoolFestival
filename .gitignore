@@ -52,6 +52,3 @@ latimeriadb
 
 # VSCode
 /.vscode/
-
-#public
-/public/*.png

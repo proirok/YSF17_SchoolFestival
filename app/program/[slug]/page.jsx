@@ -1,8 +1,21 @@
-import Image from "next/image";
-import { parseProgramsData } from "@/app/lib/index.js";
-import TitleBarWithBack from "@/app/compoent/title_bar"
-import ProgramSample from "@/app/program.mock.json";
 import styles from "../slug_page.module.css";
+import TitleBarWithBack from "@/app/compoent/title_bar";
+import { parseProgramsData, solveBasePath } from "@/app/lib/index.js";
+import ProgramSample from "@/app/program.mock.json";
+import Image from "next/image";
+
+export async function generateMetadata({ params }) {
+  // read route params
+  const { slug } = await params;
+
+  // fetch data
+  const programs = parseProgramsData(ProgramSample);
+  const program = programs.find((program) => program.id === slug);
+  return {
+    title: `蒼煌祭17th非公式ページ｜${program.name}`,
+    description: `蒼煌祭17thの企画「${program.name}」についての非公式のページです。`,
+  };
+}
 
 export async function generateStaticParams() {
   const programs = parseProgramsData(ProgramSample);
@@ -22,9 +35,9 @@ export default async function Program({ params }) {
 
   return (
     <>
-      <TitleBarWithBack backpage="/program" pagename={program.name}/>
+      <TitleBarWithBack backpage="/program" pagename={program.name} />
       <Image
-        src={program.imagePath}
+        src={solveBasePath(program.imagePath)}
         alt={program.name + " の画像"}
         width={240}
         height={240}
@@ -34,7 +47,9 @@ export default async function Program({ params }) {
         {program.programType.map((type) => {
           return (
             /* タグ検索できるようにしたらここを書き換える */
-            <div key={type} className={styles["pr-tag"]}>{type}</div>
+            <div key={type} className={styles["pr-tag"]}>
+              {type}
+            </div>
           );
         })}
       </div>

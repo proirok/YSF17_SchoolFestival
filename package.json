@@ -12,6 +12,7 @@
     "syncPublic": "node ./scripts/get_gdrive_image.js --sync-dir=/public"
   },
   "dependencies": {
+    "jotai": "^2.12.5",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -25,6 +26,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
     "eslint-config-prettier": "^10.1.5",
+    "google-auth-library": "^9.15.1",
     "googleapis": "^149.0.0",
     "pouchdb": "^9.0.0",
     "prettier": "3.5.3"
