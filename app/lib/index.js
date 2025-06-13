@@ -1,7 +1,7 @@
-export * from "./program";
-
 import nextConfig from "@/next.config.mjs";
 import path from "path";
+
+export * from "./program";
 
 /**
  * URLパスを取得する。
@@ -10,5 +10,7 @@ import path from "path";
  * @return {string}
  */
 export function solveBasePath(src) {
-  return process.env.NODE_ENV !== "production" ? path.join(nextConfig.basePath, src) : src;
+  return process.env.NODE_ENV !== "production"
+    ? path.join(nextConfig.basePath, src)
+    : src;
 }

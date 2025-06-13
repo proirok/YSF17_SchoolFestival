@@ -2,8 +2,8 @@ import home_styles from "./home.css";
 import styles from "./page.module.css";
 import { Callout } from "@/app/compoent/callout.jsx";
 import { Countdown } from "@/app/compoent/countdown.jsx";
-import Image from "next/image";
 import { solveBasePath } from "@/app/lib/index.js";
+import Image from "next/image";
 
 export const metadata = {
   title: "蒼煌祭17th非公式ページ｜トップ",

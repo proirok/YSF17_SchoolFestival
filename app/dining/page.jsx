@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
+import { solveBasePath } from "@/app/lib/index.js";
 import Image from "next/image";
 import Link from "next/link";
-import { solveBasePath } from "@/app/lib/index.js";
 
 export const metadata = {
   title: "蒼煌祭17th非公式ページ｜食事",
