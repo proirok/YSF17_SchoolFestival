@@ -2,6 +2,7 @@ import home_styles from "./home.css";
 import styles from "./page.module.css";
 import { Callout } from "@/app/compoent/callout.jsx";
 import { Countdown } from "@/app/compoent/countdown.jsx";
+import { solveBasePath } from "@/app/lib/index.js";
 import Image from "next/image";
 
 export const metadata = {
@@ -15,7 +16,7 @@ export default function Home() {
       <div id="top_visual">
         {/* 仮作成のトップです */}
         <Image
-          src="/ysf_top.png"
+          src={solveBasePath("/ysf_top.png")}
           alt="横浜サイエンスフロンティア高校の画像です"
           width={780}
           height={450}
