@@ -10,7 +10,7 @@ export * from "./program";
  * @return {string}
  */
 export function solveBasePath(src) {
-  return process.env.NODE_ENV !== "production"
+  return process.env.NODE_ENV === "production"
     ? path.join(nextConfig.basePath, src)
     : src;
 }
