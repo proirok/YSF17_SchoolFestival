@@ -15,7 +15,6 @@
  * limitations under the License.
  */
 import { authenticate } from "@google-cloud/local-auth";
-import { defineCommand, runMain } from "citty";
 import { GoogleAuth } from "google-auth-library";
 import { google } from "googleapis";
 import crypto from "node:crypto";
@@ -29,8 +28,8 @@ const SCOPES = ["https://www.googleapis.com/auth/drive"];
 // The file token.json stores the user's access and refresh tokens, and is
 // created automatically when the authorization flow completes for the first
 // time.
-const TOKEN_PATH = path.join(process.cwd(), "token.json");
-const CREDENTIALS_PATH = path.join(process.cwd(), "credentials.json");
+const TOKEN_PATH = "token.json";
+const CREDENTIALS_PATH = "credentials.json";
 const POUCHDB_DBNAME = "latimeriadb";
 const DEFAULT_SYNC_FILE_REGEXP = /^\.*?/;
 
@@ -53,7 +52,7 @@ async function loadSavedCredentialsIfExist() {
     const content = await fs.readFile(TOKEN_PATH, { encoding: "utf8" });
     const credentials = JSON.parse(content);
     return google.auth.fromJSON(credentials);
-  } catch (err) {
+  } catch {
     return null;
   }
 }
@@ -81,7 +80,7 @@ async function saveCredentials(client) {
  * Load or request or authorization to call APIs.
  * @return {Promise<import("google-auth-library").OAuth2Client>}
  */
-async function authorize() {
+export async function authorize() {
   let client = await loadSavedCredentialsIfExist();
   if (client) {
     return client;
@@ -100,7 +99,7 @@ async function authorize() {
  * Load or request or authorization to call APIs.
  * @return {Promise<import("google-auth-library").AnyAuthClient | import("google-auth-library").JSONClient>}
  */
-async function authorizeAuto() {
+export async function authorizeAuto() {
   const auth = new GoogleAuth({
     scopes: SCOPES,
   });
@@ -234,57 +233,19 @@ class SyncAgent {
 /**
  * The handler
  * @param {import("google-auth-library").OAuth2Client | import("google-auth-library").JSONClient} authClient An authorized OAuth2 client.
- * @param {string} syncDir
+ * @param {string | undefined} syncDir
  * @param {string} driveId
  * @param {boolean} force
  */
-async function driveHandler(authClient, syncDir, driveId, force) {
+export async function driveHandler(authClient, syncDir, driveId, force) {
   const drive = google.drive({ version: "v3", auth: authClient });
+  const resolveSyncDir = syncDir ? syncDir : resolve_path_from_cwd("/public");
   const agent = new SyncAgent({
     folderID: driveId,
     force: force,
     matchRule: DEFAULT_SYNC_FILE_REGEXP,
-    realSyncPath: resolve_path_from_cwd(syncDir),
+    realSyncPath: resolveSyncDir,
   });
   await agent.setup();
   await agent.sync(drive);
 }
-
-// App
-const app = defineCommand({
-  meta: {
-    name: "getGDriveFiles",
-  },
-  args: {
-    driveId: {
-      type: "string",
-      default: "1ubSpJEvVoAgLNaM3FL_sdrtP3BB5lRMz",
-    },
-    syncDir: {
-      type: "string",
-    },
-    force: {
-      type: "boolean",
-      default: false,
-    },
-    noOAuth: {
-      type: "boolean",
-      default: false,
-    },
-  },
-  run({ args }) {
-    if (!args.noOAuth) {
-      authorize()
-        .then((v) => driveHandler(v, args.syncDir, args.driveId, args.force))
-        .catch(console.error);
-    } else {
-      authorizeAuto()
-        .then((v) => {
-          driveHandler(v, args.syncDir, args.driveId, args.force);
-        })
-        .catch(console.error);
-    }
-  },
-});
-
-await runMain(app);

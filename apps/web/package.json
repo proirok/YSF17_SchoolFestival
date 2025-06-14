@@ -1,0 +1,27 @@
+{
+  "name": "latimeria",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "next lint --fix"
+  },
+  "dependencies": {
+    "jotai": "^2.12.5",
+    "next": "15.3.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "@latimeria/core": "*"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.3",
+    "@latimeria/eslint-config": "*"
+  }
+}
