@@ -1,7 +1,7 @@
 [
   {
     "id": "85ea1274-4fcd-1aa4-7c67-43d2c32a244b",
-    "menus":[
+    "menus": [
       {
         "name": "食べ物1",
         "price": 500,
@@ -12,7 +12,7 @@
   },
   {
     "id": "29fe6fea-c849-7ae3-03b5-528493e7a8bf",
-    "menus":[
+    "menus": [
       {
         "name": "コシヒカリのおにぎり",
         "price": 100,
@@ -35,7 +35,7 @@
   },
   {
     "id": "f23e837b-d283-51c9-fdc1-96edb4e7a479",
-    "menus":[
+    "menus": [
       {
         "name": "水色の金平糖",
         "price": 50,
