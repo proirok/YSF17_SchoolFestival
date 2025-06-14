@@ -49,9 +49,7 @@ export default function FoodSales() {
               <div className={styles.ingredientsTable}>
                 <table>
                   <tr>
-                    <th>
-                      食べ物名1
-                    </th>
+                    <th>食べ物名1</th>
                   </tr>
                   <tr>
                     <table
@@ -59,20 +57,12 @@ export default function FoodSales() {
                       className={styles.ingredient}
                     >
                       <tr>
-                        <th>
-                          特定原材料27品目:
-                        </th>
-                        <td>
-                          卵、りんご
-                        </td>
+                        <th>特定原材料27品目:</th>
+                        <td>卵、りんご</td>
                       </tr>
                       <tr>
-                        <th>
-                          原材料名:
-                        </th>
-                        <td>
-                          卵、米、りんご
-                        </td>
+                        <th>原材料名:</th>
+                        <td>卵、米、りんご</td>
                       </tr>
                     </table>
                   </tr>
