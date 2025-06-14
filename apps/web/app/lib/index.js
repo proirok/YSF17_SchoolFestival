@@ -1,4 +1,4 @@
-import nextConfig from "@/next.config.mjs";
+import nextConfig from "@/next.config.js";
 import path from "path";
 
 export * from "@latimeria/core";
