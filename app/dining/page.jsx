@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import { solveBasePath } from "@/app/lib/index.js";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,7 +19,7 @@ export default function Dining() {
         <Link href={"/dining/cafeteria"}>
           {/** たくさんの席を写したカフェテリアの写真とか？ */}
           <Image
-            src="/dining/cafeteria.png"
+            src={solveBasePath("/dining/cafeteria.png")}
             alt="いい感じのカフェテリアの画像"
             className={styles.imagebuttonImage}
             width={560}
@@ -32,7 +33,7 @@ export default function Dining() {
         <Link href={"/dining/foodSales"}>
           {/** 食販 */}
           <Image
-            src="/dining/foodSales.png"
+            src={solveBasePath("/dining/foodSales.png")}
             alt="いい感じの食販の画像"
             className={styles.imagebuttonImage}
             width={560}

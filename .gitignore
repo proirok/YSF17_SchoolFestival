@@ -44,5 +44,11 @@ next-env.d.ts
 credentials.json
 token.json
 
+# Ignore generated credentials from google-github-actions/auth
+gha-creds-*.json
+
 # Sync
 latimeriadb
+
+# VSCode
+/.vscode/
