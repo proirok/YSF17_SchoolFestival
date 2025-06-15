@@ -9,7 +9,7 @@ import {
 } from "@/app/compoent/select.jsx";
 import ProgramSample from "@/app/program.mock.json";
 import styles from "@/app/program/programs.module.css";
-import { parseProgramsData, Programs, Tags } from "@latimeria/core";
+import { parseProgramsData, Tags } from "@latimeria/core";
 import { atom, createStore, Provider, useAtom, useAtomValue } from "jotai";
 import { useMemo } from "react";
 
@@ -18,7 +18,7 @@ const tagsAtom = atom(new Tags([]));
 const kindsSelectStore = createStore();
 const placesSelectStore = createStore();
 // TODO:サンプルデータにつきデータ取り扱いの正式な方式を考慮必要
-const programsAtom = atom(new Programs(parseProgramsData(ProgramSample)));
+const programsAtom = atom(parseProgramsData(ProgramSample));
 
 /**
  * @returns {JSX.Element}
@@ -86,11 +86,11 @@ function KindSelectMenu({}) {
                 : styles.programSelectPullDownItemsHide
             }
           >
-            <SelectItem value={"体験"}>体験</SelectItem>
-            <SelectItem value={"展示"}>展示</SelectItem>
-            <SelectItem value={"上演"}>上演</SelectItem>
-            <SelectItem value={"販売"}>販売</SelectItem>
-            <SelectItem value={"配布"}>配布</SelectItem>
+            <SelectItem value="体験">体験</SelectItem>
+            <SelectItem value="展示">展示</SelectItem>
+            <SelectItem value="上演">上演</SelectItem>
+            <SelectItem value="販売">販売</SelectItem>
+            <SelectItem value="配布">配布</SelectItem>
           </div>
         </div>
       </SelectMenu>
@@ -118,14 +118,14 @@ function PlaceSelectMenu({}) {
                 : styles.programSelectPullDownItemsHide
             }
           >
-            <SelectItem value={"1F"}>1F</SelectItem>
-            <SelectItem value={"2F"}>2F</SelectItem>
-            <SelectItem value={"3F"}>3F</SelectItem>
-            <SelectItem value={"4F"}>4F</SelectItem>
-            <SelectItem value={"5F"}>5F</SelectItem>
-            <SelectItem value={"屋上"}>屋上</SelectItem>
-            <SelectItem value={"体育館"}>体育館</SelectItem>
-            <SelectItem value={"交流センター"}>交流センター</SelectItem>
+            <SelectItem value="1F">1F</SelectItem>
+            <SelectItem value="2F">2F</SelectItem>
+            <SelectItem value="3F">3F</SelectItem>
+            <SelectItem value="4F">4F</SelectItem>
+            <SelectItem value="5F">5F</SelectItem>
+            <SelectItem value="屋上">屋上</SelectItem>
+            <SelectItem value="体育館">体育館</SelectItem>
+            <SelectItem value="交流センター">交流センター</SelectItem>
           </div>
         </div>
       </SelectMenu>

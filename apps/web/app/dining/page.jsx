@@ -16,7 +16,7 @@ export default function Dining() {
       {/** 別に絶対写真を使いたいわけではない */}
       {/** 画像に薄めの白/黒を重ねたかったけどやり方が分からなかった */}
       <div className={styles.imagebutton}>
-        <Link href={"/dining/cafeteria"}>
+        <Link href="/dining/cafeteria">
           {/** たくさんの席を写したカフェテリアの写真とか？ */}
           <Image
             src={solveBasePath("/dining/cafeteria.png")}
@@ -30,7 +30,7 @@ export default function Dining() {
         <h1>カフェテリア</h1>
       </div>
       <div className={styles.imagebutton}>
-        <Link href={"/dining/foodSales"}>
+        <Link href="/dining/foodSales">
           {/** 食販 */}
           <Image
             src={solveBasePath("/dining/foodSales.png")}

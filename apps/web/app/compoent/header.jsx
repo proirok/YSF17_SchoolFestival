@@ -12,13 +12,13 @@ export default function Header({ view = "PC" }) {
     return (
       <header className={styles.header}>
         <div className={styles.logo}>
-          <Link href={"/"}>🐟</Link>
+          <Link href="/">🐟</Link>
         </div>
         <div className={styles.menu}>
-          <Link href={"/program"}>企画</Link>
-          <Link href={"/dining"}>食事</Link>
-          <Link href={"/timetable"}>タイムテーブル</Link>
-          <Link href={"/map"}>地図</Link>
+          <Link href="/program">企画</Link>
+          <Link href="/dining">食事</Link>
+          <Link href="/timetable">タイムテーブル</Link>
+          <Link href="/map">地図</Link>
         </div>
       </header>
     );
