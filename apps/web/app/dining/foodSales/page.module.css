@@ -3,7 +3,7 @@
 @media (min-width: calc(480px + 2em)) {
   .foodSalesMenuArea {
     display: grid;
-    column-gap: 1em;
+    column-gap: 1em;/** calc(calc(100% - calc(round(down, calc(calc(100% - 2em) / 480px), 100px) * 480px)) / calc(round(down, calc(calc(100% - 2em) / 480px), 100px) - 1));*/
     row-gap: 2em;
     grid-template-columns: repeat(auto-fill, 480px);/**500px;/**272px, 272px, 272px;*/
 
