@@ -1,6 +1,5 @@
 import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
-import eslintConfigPrettier from "eslint-config-prettier";
 import turboPlugin from "eslint-plugin-turbo";
 import tseslint from "typescript-eslint";
 import globals from "globals"
@@ -27,8 +26,7 @@ export const config = [
     }
   },
   stylistic.configs.recommended,
-  eslintConfigPrettier,
   {
-    ignores: ["dist/**", ".next/**"],
+    ignores: ["dist/**", ".next/**", "node_modules/**"],
   },
 ];

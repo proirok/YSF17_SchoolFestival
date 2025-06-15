@@ -1,2 +1,2 @@
-export * from "./program";
-export * from "./event"
+export * from './program'
+export * from './event'
