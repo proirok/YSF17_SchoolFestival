@@ -21,13 +21,60 @@ export default function FoodSales() {
         <h1>食販団体一覧</h1>
         {/** 食販に限った企画で要求される機能が似ているのでprogram/slug/page.jsxの機能を流用しようかな？ */}
         {/** スマホ想定の文字サイズ */}
-        <div id="foodSaleMenus">
-          {/** 例。図形どうしよう */}
+        <div id="foodSaleMenus" className={styles.foodSalesMenuArea}>
+          {/** 例。図形どうしよう */}{/** 一カード？の塊 */}
           <div className={styles.foodSalesMenuCard}>
-            {/** 一カード？の塊 */}
             <table className={styles.foodSalesMenuBox}>
               <tr>
-                <th scope="row" colSpan={2}>
+                <th scope="row" colSpan={3}>
+                  <p>ここには食販企画名が入るよ</p>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row" className={styles.foodSalesMenuName}>
+                  <p className={styles.foodSalesMenuBigChars}>食べ物名1</p>
+                </th>
+                <td className={styles.foodSalesMenuName2Price}>
+                  <p className={styles.foodSalesMenuBigChars}>―</p>
+                </td>
+                <td className={styles.foodSalesMenuPrice}>
+                  <p className={styles.foodSalesMenuBigChars}>100円</p>
+                </td>
+              </tr>
+            </table>
+            <div className={styles.line}></div>
+            <details className={styles.ingredients}>
+              <summary className={styles.ingredientsSummary}>アレルゲン・原材料情報</summary>
+              <div className={styles.ingredientsTable}>
+                <table>
+                  <tr>
+                    <th>食べ物名1</th>
+                  </tr>
+                  <tr>
+                    <table
+                      style={{ marginLeft: "0.5em" }}
+                      className={styles.ingredient}
+                    >
+                      <tr>
+                        <th>特定原材料27品目:</th>
+                        <td>卵、りんご</td>
+                      </tr>
+                      <tr>
+                        <th>原材料名:</th>
+                        <td>卵、米、りんご</td>
+                      </tr>
+                    </table>
+                  </tr>
+                </table>
+              </div>
+            </details>
+          </div>
+
+          {/** 2つめ */}
+          <div className={styles.foodSalesMenuCard}>
+            <table className={styles.foodSalesMenuBox}>
+              <tr>
+                <th scope="row" colSpan={3}>
                   <p>ここには食販企画名が入るよ</p>
                 </th>
               </tr>
