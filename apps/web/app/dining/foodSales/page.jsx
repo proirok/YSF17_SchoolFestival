@@ -22,9 +22,8 @@ export default function FoodSales() {
         {/** 食販に限った企画で要求される機能が似ているのでprogram/slug/page.jsxの機能を流用しようかな？ */}
         {/** スマホ想定の文字サイズ */}
         <div id="foodSaleMenus">
-          {/** 例。図形どうしよう */}
+          {/** 例。図形どうしよう */}{/** 一カード？の塊 */}
           <div className={styles.foodSalesMenuCard}>
-            {/** 一カード？の塊 */}
             <table className={styles.foodSalesMenuBox}>
               <tr>
                 <th scope="row" colSpan={2}>
