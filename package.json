@@ -16,5 +16,8 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "react-device-detect": "^2.2.3"
+  }
 }
