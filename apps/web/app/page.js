@@ -1,3 +1,4 @@
+import "./home.css";
 import styles from "./page.module.css";
 import { Callout } from "@/app/compoent/callout.jsx";
 import { Countdown } from "@/app/compoent/countdown.jsx";
