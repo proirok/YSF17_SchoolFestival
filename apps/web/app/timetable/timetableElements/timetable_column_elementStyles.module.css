@@ -1,5 +1,22 @@
 .columnElement {
-    width: 98%;
+    grid-column: 1 / 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 90%;
     margin: 0 auto;
-    background-color: lightgray;
+
+    color: white;
+
+    background-color: var(--stripColor);
+}
+
+.columnElement p {
+    padding: 0px;
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 1.25rem;
 }

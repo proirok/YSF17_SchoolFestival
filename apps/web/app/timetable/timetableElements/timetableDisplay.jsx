@@ -10,6 +10,11 @@ export function TimetableDisplay() {
 
     function toggleValue() {
         setDay(3 - day);
+        //詳細を全て畳む
+        const el = Array(...document.getElementsByClassName("timetable_column"));
+        el.forEach(element => {
+            element.classList.add("closed_inTimetable")
+        });
     }
 
     return (

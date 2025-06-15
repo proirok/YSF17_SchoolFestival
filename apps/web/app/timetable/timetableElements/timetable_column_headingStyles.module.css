@@ -1,30 +1,40 @@
 .headingBoard {
     position: relative;
-    width: 98%;
-    margin: 1%;
+    width: 94%;
+    margin: 0 auto;
+    margin-top: 5px;
     aspect-ratio: 8 / 5;
-    background-color: darkgray;
+    background-color: var(--headingColor);
     color: white;
 }
 
 .teamName {
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     padding-left: .3rem;
 }
 
 .summary {
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding-left: .3rem;
 }
 
-.hashtags {
+.extraInfo {
+    position: relative;
+    top: 8px;
     font-size: 0.8rem;
-    padding-left: 1rem;
 }
 
 .expandButton {
     position: absolute;
     right: 0px;
     bottom: 0px;
+    width: 4.5rem;
+    height: 2rem;
+
+    background-color: transparent;
+    color: white;
+    text-align: right;
+    padding-right: 2%;
+    border: none;
 }

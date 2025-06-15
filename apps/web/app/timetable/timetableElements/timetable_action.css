@@ -7,3 +7,7 @@
 :not(.closed_inTimetable .open_button).open_button {
     display: none;
 }
+
+:not(.closed_inTimetable .line_1hour).line_1hour {
+    width: 200%;
+}
