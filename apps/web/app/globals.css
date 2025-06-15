@@ -36,6 +36,10 @@ body {
   }
 }
 
+#main-content{
+  padding-bottom: 64px;
+}
+
 /*統一するスタイルの定義
 
 .touchable
@@ -65,7 +69,7 @@ p {
   font-size: 1rem;
   padding-left: 1em;
 }
-a {
+a:not(:has(*)) {
   display: inline-block;
   color: var(--color_touchable);
   border-bottom: 2px solid;

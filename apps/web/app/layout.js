@@ -1,5 +1,5 @@
 import "./globals.css";
-import Header from "@/app/compoent/header";
+import Menu from "@/app/menu.jsx";
 import { Noto_Sans_JP } from "next/font/google";
 
 const notoSansJP = Noto_Sans_JP({
@@ -19,8 +19,10 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line-seed-jp/line-seed-jp.css" />
       </head>
       <body className={notoSansJP.variable}>
-        <Header />
-        {children}
+        <Menu/>
+        <div id="main-content">
+          {children}
+        </div>
       </body>
     </html>
   );
