@@ -1,25 +1,37 @@
-@media (orientation: portrait) {
-  /** 縦長 */
-  .foodSalesMenuCard {
-    background: #d9d9d9;
+/* 十分な幅 = 480px + margin:1emが左右 */
+/* PCのような、幅が十分にあるとき */
+@media (min-width: calc(480px + 2em)) {
+  .foodSalesMenuArea {
+    display: grid;
+    column-gap: 1em;
+    row-gap: 2em;
+    grid-template-columns: repeat(auto-fill, 480px);/**500px;/**272px, 272px, 272px;*/
+
     margin: 1em;
-    max-width: 272px;
-    /**max-width: fit-content;*/
-    min-width: calc(100vw - 2em);
-    /** min-width: fit-content; */
   }
 }
-@media (orientation: landscape) {
-  /** 横長 */
-  .foodSalesMenuCard {
-    background: #d9d9d9;
+/* 縦画面スマホのような、幅が十分にない時 */
+@media (max-width: calc(480px + 2em - 1px)) {
+  .foodSalesMenuArea {
+    display: grid;
+    column-gap: 1em;
+    row-gap: 2em;
+    grid-template-columns: repeat(auto-fill, 100vw - 2em);/**500px;/**272px, 272px, 272px;*/
+
     margin: 1em;
-    max-width: 272px;
-    /**max-width: fit-content;*/
-    min-width: calc(100vw - 2em);
-    /** min-width: fit-content; */
   }
 }
+
+.foodSalesMenuCard {
+    background: #d9d9d9;
+    width: 100%;
+    height: fit-content;
+    /**margin: 1em;*/
+    /**max-width: fit-content;/**272px;*/
+    /**max-width: fit-content;*/
+    /**min-width: 272px;/**calc(100vw - 2em);*/
+    /** min-width: fit-content; */
+  }
 
 .foodSalesMenuBox {
   padding-top: 1em;
@@ -31,23 +43,29 @@
 
 .foodSalesMenuName {
   max-width: max-content;
+  padding-left: 1.5em;
   /**font-size: 1.5em;*/
 }
 
 .foodSalesMenuName2Price {
   text-align: center;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  width: max-content;
+  /**padding-left: 1.5em;
+  padding-right: 1.5em;**/
 }
 
 .foodSalesMenuPrice {
   float: right;
   text-align: right;
   /**font-size: 1.5em;*/
+  padding-left: 0%;
 }
 
 .foodSalesMenuBigChars {
   font-size: 1.5em;
+  margin-right: 0em;
+  margin-left: 0%;
+  padding-left: 0%;
 }
 
 .line {
@@ -63,6 +81,11 @@
 }
 .ingredients[open] {
   background-color: #00000011;
+}
+.ingredientsSummary {
+  width: 100%;
+  /**height: 100px;*/
+  text-align: left;
 }
 
 /**一つの食べ物を囲む*/
