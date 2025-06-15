@@ -1,14 +1,9 @@
 import "./globals.css";
-import Header from "@/app/compoent/header";
-import { M_PLUS_2, Noto_Sans_JP } from "next/font/google";
+import Menu from "@/app/menu.jsx";
+import { Noto_Sans_JP } from "next/font/google";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
-  subsets: ["latin"],
-});
-
-const mPlus2 = M_PLUS_2({
-  variable: "--font-m-plus2",
   subsets: ["latin"],
 });
 
@@ -20,9 +15,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ja">
-      <body className={`${mPlus2.variable} ${notoSansJP.variable}`}>
-        <Header />
-        {children}
+      <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line-seed-jp/line-seed-jp.css" />
+      </head>
+      <body className={notoSansJP.variable}>
+        <Menu/>
+        <div id="main-content">
+          {children}
+        </div>
       </body>
     </html>
   );
