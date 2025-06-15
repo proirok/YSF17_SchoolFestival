@@ -10,7 +10,7 @@ export async function generateMetadata({ params }) {
 
   // fetch data
   const programs = parseProgramsData(ProgramSample);
-  const program = programs.find((program) => program.id === slug);
+  const program = programs.iter().find((program) => program.id === slug);
   return {
     title: `蒼煌祭17th非公式ページ｜${program.name}`,
     description: `蒼煌祭17thの企画「${program.name}」についての非公式のページです。`,
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
 
 export async function generateStaticParams() {
   const programs = parseProgramsData(ProgramSample);
-  return programs.map((program) => ({ slug: program.id }));
+  return programs.iter().map((program) => ({ slug: program.id }));
 }
 
 /**
@@ -31,7 +31,7 @@ export async function generateStaticParams() {
 export default async function Program({ params }) {
   const { slug } = await params;
   const programs = parseProgramsData(ProgramSample);
-  const program = programs.find((program) => program.id === slug);
+  const program = programs.iter().find((program) => program.id === slug);
 
   return (
     <>
@@ -57,12 +57,12 @@ export default async function Program({ params }) {
         <div className={styles["pr-subject"]}>
           <h3>{program.name}</h3>
           <h3 style={{ marginLeft: "auto" }}>
-            {program.floor + "階 @" + program.location}
+            {program.aria + "階 @" + program.location}
           </h3>
         </div>
         <div className={styles["pr-text"]}>{program.prText || ""}</div>
       </div>
-      {/*地図も作りましょう*/}
+      {/* 地図も作りましょう */}
       <div style={{ marginTop: "1em" }}>位置を示す地図</div>
     </>
   );
