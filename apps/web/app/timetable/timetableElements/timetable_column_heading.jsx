@@ -8,10 +8,9 @@ export function Column_heading({ programsInfo, index }) {
     }
     return (
         <div className={styles.headingBoard}>
-            <p className={styles.teamName}>{programsInfo.name}</p>
+            <p className={styles.teamName}>{programsInfo.team}</p>
             <p className={styles.summary}>{programsInfo.summary}</p>
-            <p className={styles.extraInfo}>#{programsInfo.tags[0]}</p>
-            <p className={styles.extraInfo}>@{programsInfo.place}</p>
+            <p className={styles.extraInfo}>#{programsInfo.hashtag}</p>
             <button className={`${styles.expandButton} open_button`} onClick={open_detail}>詳細≫</button>
         </div>
     )
