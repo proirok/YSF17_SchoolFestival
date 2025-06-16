@@ -23,7 +23,7 @@ export default function Program() {
     }
   }
   else {
-    if (now.getHours() == 8 && now.getDate() == 6) {
+    if (now.getMonth() == 8 && now.getDate() == 6) {
       pickup_text = "9月6日(day1)に行われるイベントをランダムに表示します！";
     }
     else {
