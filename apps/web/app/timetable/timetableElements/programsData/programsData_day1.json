@@ -41,7 +41,7 @@
                 "end": "11:00"
             },
             {
-                "name": "企画①",
+                "name": "実験①",
                 "type": "event",
                 "description": "葉緑素取り出し・葉脈見本",
                 "location": " 3階 生物実験室2",
@@ -59,7 +59,7 @@
                 "end": "14:00"
             },
             {
-                "name": "企画②",
+                "name": "実験②",
                 "type": "event",
                 "description": "DNA抽出",
                 "location": " 3階 生物実験室2",

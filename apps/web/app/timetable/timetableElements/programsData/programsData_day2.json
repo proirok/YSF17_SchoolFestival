@@ -9,7 +9,7 @@
                 "name": "時計反応",
                 "type": "event",
                 "description": "",
-                "location": "@1階視聴覚室",
+                "location": "1階視聴覚室",
                 "eventId": "<eventId>",
                 "start": "11:30",
                 "end": "12:00"
@@ -18,7 +18,7 @@
                 "name": "真空砲",
                 "type": "event",
                 "description": "",
-                "location": "@1階視聴覚室",
+                "location": "1階視聴覚室",
                 "eventId": "<eventId>",
                 "start": "14:00",
                 "end": "14:30"
@@ -41,7 +41,7 @@
                 "end": "11:00"
             },
             {
-                "name": "企画③",
+                "name": "実験③",
                 "type": "event",
                 "description": "解剖",
                 "location": "3階 生物実験室2",
@@ -59,7 +59,7 @@
                 "end": "14:00"
             },
             {
-                "name": "企画②",
+                "name": "実験②",
                 "type": "event",
                 "description": "DNA抽出",
                 "location": "3階 生物実験室2",
