@@ -12,8 +12,9 @@ export function FoodSalesCardExporter(cardData = {
         }
       ]
     }) {
-  const NameAndPrices = cardData.menus.map(item => <NameAndPrice menu={item}/>);//メニューを生成してそれを配列化
-  const Ingredients = cardData.menus.map(item => <Ingredient menu={item}/>);//原材料表示を生成してそれを配列化
+  //console.log(cardData);
+  const NameAndPrices = cardData.menus?.map(item => <NameAndPrice menu={item}/>);//メニューを生成してそれを配列化
+  const Ingredients = cardData.menus?.map(item => <Ingredient menu={item}/>);//原材料表示を生成してそれを配列化
 
   return (
     <div className={styles.foodSalesMenuCard}>
