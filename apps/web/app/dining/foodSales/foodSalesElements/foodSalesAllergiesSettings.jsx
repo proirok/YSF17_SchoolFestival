@@ -1,9 +1,9 @@
 import styles from "../page.module.css";
 import { foodSalesMenu } from "./foodSalesMenus"
-import { foodSalesAllergiesFilter } from "./foodSalesAllergiesFilter";
+import { FoodSalesAllergiesFilter } from "./foodSalesAllergiesFilter";
 
 export function FoodSalesAllergiesSettings() {
-  let foodSalesMenuOriginal = foodSalesMenu;
+  //let foodSalesMenuOriginal = foodSalesMenu;
 
   //処理
 
@@ -13,11 +13,7 @@ export function FoodSalesAllergiesSettings() {
         {/** アレルギー選択部分 */}
       </div>
 
-      <div id="foodSaleMenus" className={styles.foodSalesMenuArea}>
-        {
-
-        }
-      </div>
+      <FoodSalesAllergiesFilter />
     </div>
   )
 }

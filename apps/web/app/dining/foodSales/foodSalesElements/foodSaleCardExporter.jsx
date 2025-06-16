@@ -1,6 +1,17 @@
 import styles from "../page.module.css";
 
-export function FoodSalesCardExporter(cardData) {
+export function FoodSalesCardExporter(cardData = {
+      team: "unknown_team",
+      name: "unknown_name",
+      menus: [
+        {
+          "name": "unknown_food",
+          "price": 500,
+          "specificIngredients": ["卵", "りんご"],
+          "ingredients": ["卵", "米", "りんご"]
+        }
+      ]
+    }) {
   const NameAndPrices = cardData.menus.map(item => <NameAndPrice menu={item}/>);//メニューを生成してそれを配列化
   const Ingredients = cardData.menus.map(item => <Ingredient menu={item}/>);//原材料表示を生成してそれを配列化
 
