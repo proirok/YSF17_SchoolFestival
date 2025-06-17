@@ -81,7 +81,7 @@ export function Ingredient(menu) {
           </tr>
           <tr>
             <th>原材料名:</th>
-            <td><p className={styles.ingredientP}>{ menu.menu.ingredients.join("、<wrb/>") }</p></td>
+            <td><p className={styles.ingredientP}>{ menu.menu.ingredients.join("、") }</p></td>
           </tr>
         </table>
       </tr>
