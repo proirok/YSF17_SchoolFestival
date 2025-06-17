@@ -1,6 +1,8 @@
 import styles from "../page.module.css";
+import Link from "next/link";
 
 export function FoodSalesCardExporter(cardData = {
+      teamId: "xxxx",
       team: "unknown_team",
       name: "unknown_name",
       menus: [
@@ -21,7 +23,7 @@ export function FoodSalesCardExporter(cardData = {
         <thread>
         <tr>
           <th scope="row" colSpan={3}>
-            <p>{ cardData.team } - { cardData.name }</p>
+            <p><Link href={`/program/${cardData.cardData.teamId}`}>{ cardData.cardData.team }</Link>:&nbsp;&nbsp;{ cardData.cardData.name }</p>
           </th>
         </tr>
         </thread>
