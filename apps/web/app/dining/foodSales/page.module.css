@@ -96,6 +96,11 @@
   padding: 0.25em;
 }
 
+/** 一つの食べ物のグループ */
+.foodIngredient {
+  width: 100%;
+  max-width: 100%;
+}
 /**一つの食べ物の原材料とかを囲む*/
 .ingredient {
   width: max-content;
@@ -104,4 +109,10 @@
 }
 .ingredient th {
   padding-right: 1em;
+}
+
+.ingredientP {
+  padding-left: 0%;
+  width: 100%;
+  /**display: block;*/
 }

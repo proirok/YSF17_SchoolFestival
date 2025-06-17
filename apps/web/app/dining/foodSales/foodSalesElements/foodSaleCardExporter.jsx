@@ -12,18 +12,19 @@ export function FoodSalesCardExporter(cardData = {
         }
       ]
     }) {
-  //console.log(cardData);
-  const NameAndPrices = cardData.menus?.map(item => <NameAndPrice menu={item}/>);//メニューを生成してそれを配列化
-  const Ingredients = cardData.menus?.map(item => <Ingredient menu={item}/>);//原材料表示を生成してそれを配列化
+  const NameAndPrices = cardData.cardData.menus?.map(item => <NameAndPrice menu={item}/>);//メニューを生成してそれを配列化
+  const Ingredients = cardData.cardData.menus?.map(item => <Ingredient menu={item}/>);//原材料表示を生成してそれを配列化
 
   return (
     <div className={styles.foodSalesMenuCard}>
       <table className={styles.foodSalesMenuBox}>
+        <thread>
         <tr>
           <th scope="row" colSpan={3}>
             <p>{ cardData.team } - { cardData.name }</p>
           </th>
         </tr>
+        </thread>
         
         { NameAndPrices }
         
@@ -44,17 +45,19 @@ export function FoodSalesCardExporter(cardData = {
 //商品名とその価格
 export function NameAndPrice(menu) {
   return (
+    <tbody>
     <tr>
       <th scope="row" className={styles.foodSalesMenuName}>
-        <p className={styles.foodSalesMenuBigChars}>{ menu.name }</p>
+        <p className={styles.foodSalesMenuBigChars}>{ menu.menu.name }</p>
       </th>
       <td className={styles.foodSalesMenuName2Price}>
         <p className={styles.foodSalesMenuBigChars}>―</p>
       </td>
       <td className={styles.foodSalesMenuPrice}>
-        <p className={styles.foodSalesMenuBigChars}>{ menu.price }円</p>
+        <p className={styles.foodSalesMenuBigChars}>{ menu.menu.price }円</p>
       </td>
     </tr>
+    </tbody>
   )
 }
 
@@ -62,9 +65,10 @@ export function NameAndPrice(menu) {
 //商品名とその原材料
 export function Ingredient(menu) {
   return (
-    <table>
+    <table className={styles.foodIngredient}>
+      <tbody>
       <tr>
-        <th>{ menu.name }</th>
+        <th>{ menu.menu.name }</th>
       </tr>
       <tr>
         <table
@@ -73,14 +77,15 @@ export function Ingredient(menu) {
         >
           <tr>
             <th>特定原材料27品目:</th>
-            <td>{ menu.specificIngredients.join("、<wrb/>") }</td>
+            <td>{ menu.menu.specificIngredients.join("、") }</td>
           </tr>
           <tr>
             <th>原材料名:</th>
-            <td>{ menu.ingredients.join("、<wrb/>") }</td>
+            <td><p className={styles.ingredientP}>{ menu.menu.ingredients.join("、<wrb/>") }</p></td>
           </tr>
         </table>
       </tr>
+      </tbody>
     </table>
   )
 }
