@@ -19,10 +19,10 @@
 }
 
 .timeBoard {
-    height: 600px;
+    height: calc(5*4*2.1rem);
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(60, 1fr);
+    grid-template-rows: repeat(60, 0.7rem);
     /*5時間を5分刻みで*/
 
     margin-top: 20px;

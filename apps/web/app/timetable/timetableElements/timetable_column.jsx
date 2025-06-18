@@ -12,21 +12,21 @@ export function Timetable_column({ programsInfo, index }) {
         return (hour - 10) * 12 + Math.round(minute / 5) + 1;
     }
 
-    const element_contents = programsInfo.details.map(
+    const element_contents = programsInfo.timetable.map(
         (x, i) =>
             <Column_element
                 key={`columnEl_${i}`}
-                content={`${x.time.start}～${x.time.end}`}
-                startIndex={timeToIndex(x.time.start)}
-                endIndex={timeToIndex(x.time.end)} />
+                timetable={x}
+                startIndex={timeToIndex(x.start)}
+                endIndex={timeToIndex(x.end)} />
     );
-    const element_detailsContents = programsInfo.details.map(
+    const element_detailsContents = programsInfo.timetable.map(
         (x, i) =>
             <Column_detailsElement
                 key={`columnDetailEl_${i}`}
-                programsDetail={x}
-                startIndex={timeToIndex(x.time.start)}
-                endIndex={timeToIndex(x.time.end)} />);
+                timetable={x}
+                startIndex={timeToIndex(x.start)}
+                endIndex={timeToIndex(x.end)} />);
     const line_1hour = [...Array(6)].map(
         (_, i) =>
             <div
