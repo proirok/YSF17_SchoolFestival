@@ -1,4 +1,5 @@
-import { CRS, LatLng, LatLngBounds, icon} from 'leaflet';
+"use client"
+import { CRS, LatLng, LatLngBounds, Icon} from 'leaflet';
 import React from 'react';
 import { MapContainer, ImageOverlay, LayersControl, Marker, Popup} from 'react-leaflet'
 import Link from 'next/link'
@@ -9,7 +10,7 @@ export const Map = () => {
   const picheight = 540;
   const position1 = [picheight/2,picwidth/2];
 
-  const ICON = icon({
+  const ICON = Icon({
   iconUrl: "https://raw.githubusercontent.com/proirok/buffer/refs/heads/main/map_pin.svg",
   iconSize: [200, 200],
   iconAnchor: [100, 100],

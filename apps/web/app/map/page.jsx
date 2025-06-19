@@ -1,4 +1,4 @@
-import ysfmap from "@/app/map/Map.jsx"
+import Ysfmap from "@/app/map/Map.jsx"
 
 export const metadata = {
   title: "蒼煌祭17th非公式ページ｜地図",
@@ -9,7 +9,7 @@ export default function Map() {
   return (
     <div>
       <h2>地図</h2>
-      return <ysfmap />
+      <Ysfmap />
       <p>Coming Soon...</p>
     </div>
   );
