@@ -5,6 +5,7 @@ import { MapContainer, ImageOverlay, LayersControl, Marker, Popup} from 'react-l
 import Link from 'next/link'
 import Image from 'next/image'
 import './Map.css';
+import 'leaflet/dist/leaflet.css';
 export default function Map(){
   const picwidth = 960;
   const picheight = 540;
