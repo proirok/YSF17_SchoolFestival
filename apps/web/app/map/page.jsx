@@ -10,7 +10,7 @@ export default function Map() {
     <div>
       <h2>地図</h2>
       <Ysfmap />
-      <p>Coming Soon...</p>
+      <p> coming soon...... </p>
     </div>
   );
 }

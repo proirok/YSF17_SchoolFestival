@@ -1,16 +1,16 @@
 "use client"
-import { CRS, LatLng, LatLngBounds, Icon} from 'leaflet';
+import { CRS, LatLng, LatLngBounds, icon} from 'leaflet';
 import React from 'react';
 import { MapContainer, ImageOverlay, LayersControl, Marker, Popup} from 'react-leaflet'
 import Link from 'next/link'
 import Image from 'next/image'
 import './Map.css';
-export const Map = () => {
+export default function Map(){
   const picwidth = 960;
   const picheight = 540;
   const position1 = [picheight/2,picwidth/2];
 
-  const ICON = Icon({
+  const ICON = icon({
   iconUrl: "https://raw.githubusercontent.com/proirok/buffer/refs/heads/main/map_pin.svg",
   iconSize: [200, 200],
   iconAnchor: [100, 100],
@@ -25,7 +25,7 @@ export const Map = () => {
     style={{ width: picwidth, height: picheight }}
     maxBounds={[[0,0], [picheight, picwidth]]}
   >
-    <LayersControl position="bottomright" collapsed="true">
+    <LayersControl position="bottomright" collapsed="false">
       <LayersControl.BaseLayer checked name = "1階">
         <ImageOverlay url={'https://raw.githubusercontent.com/proirok/buffer/refs/heads/main/sample_map.svg'} bounds={new LatLngBounds([[0, 0], [picheight, picwidth]])} />
       </LayersControl.BaseLayer>
