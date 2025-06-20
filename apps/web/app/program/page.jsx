@@ -1,4 +1,4 @@
-import Programs from "@/app/program/programs.jsx";
+import { ProgramsView } from "@/app/program/programs.jsx";
 
 export const metadata = {
   title: "蒼煌祭17th非公式ページ｜企画",
@@ -10,5 +10,5 @@ export const metadata = {
  * @constructor
  */
 export default function Program() {
-  return <Programs />;
+  return <ProgramsView />
 }
