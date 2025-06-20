@@ -5,9 +5,9 @@ import { MapContainer, ImageOverlay, LayersControl, Marker, Popup, useMapEvents}
 import Link from 'next/link'
 import Image from 'next/image'
 import './Map.css';
-import 'leaflet/dist/leaflet.css';
+import 'leaflet/dist/leaflet.css';  //リーフレットの本体のCSSの読み込み(これしないと地図が崩れる)
 
-const {BaseLayer} = LayersControl;
+const {BaseLayer} = LayersControl;  //
 
 const layers = [{ name : "1階", url: "https://raw.githubusercontent.com/proirok/buffer/refs/heads/main/sample_map.svg"},
   {name : "2階", url: "https://raw.githubusercontent.com/proirok/buffer/refs/heads/main/sample_map2.svg"}]
