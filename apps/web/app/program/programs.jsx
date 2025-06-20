@@ -8,7 +8,6 @@ import { parseProgramsData, Tags } from "@latimeria/core";
 import {atom, useAtom, useAtomValue, useSetAtom} from "jotai";
 import {
   Button,
-  Label,
   ListBox,
   ListBoxItem,
   Popover,
@@ -55,14 +54,13 @@ function KindSelectMenu({}) {
   return (
       <Select onSelectionChange={(selected) => {
         setTags((prev) => new Tags([...prev, selected]));
-      }}>
-        <Label>形態</Label>
-        <Button>
+      }} placeholder={"種類"}>
+        <Button className={styles.programSelectPullDown}>
           <SelectValue />
           <span aria-hidden="true">▼</span>
         </Button>
         <Popover>
-          <ListBox>
+          <ListBox className={styles.programSelectPullDownItems}>
             <ListBoxItem id="体験">体験</ListBoxItem>
             <ListBoxItem id="展示">展示</ListBoxItem>
             <ListBoxItem id="上演">上演</ListBoxItem>
@@ -84,14 +82,13 @@ function PlaceSelectMenu({}) {
   return (
   <Select onSelectionChange={(selected) => {
     setTags((prev) => new Tags([...prev, selected]));
-  }}>
-    <Label>場所</Label>
-    <Button>
+  }} placeholder={"場所"}>
+    <Button className={styles.programSelectPullDown}>
       <SelectValue />
       <span aria-hidden="true">▼</span>
     </Button>
     <Popover>
-      <ListBox>
+      <ListBox className={styles.programSelectPullDownItems}>
         <ListBoxItem id="1F">1F</ListBoxItem>
         <ListBoxItem id="2F">2F</ListBoxItem>
         <ListBoxItem id="3F">3F</ListBoxItem>
